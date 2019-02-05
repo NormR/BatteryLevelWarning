@@ -1,0 +1,30 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+     <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="set_debug_text"
+        android:title="@string/pref_title_set_debug_text"
+        android:summary="@string/pref_summary_set_debug_text" />
+
+     <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="do_testing"
+        android:title="Do continuous testing"
+        android:summary="Continuous testing" />
+     
+     <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="write_levels"
+        android:title="Write batt levels to file"
+        android:summary="Save levels" />
+     
+     <ListPreference
+         android:defaultValue="25"
+         android:key="batteryLevel"
+         android:title="Battery Level"
+         android:summary="Batttery Level for warning message" 
+         android:entries="@array/batteryLevelsArray"
+         android:entryValues="@array/batteryLevelsArray" />
+     
+     
+</PreferenceScreen>

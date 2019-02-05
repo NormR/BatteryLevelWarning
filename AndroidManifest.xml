@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.normsstuff.batterylevelwarning"
+    android:versionCode="1"
+    android:versionName="1.4c" >
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="22" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        <receiver
+      		android:name=".OnAlarmReceive" />
+        
+        
+        <activity
+            android:name=".BatteryLevelWarning"
+            android:launchMode="singleTop"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.normsstuff.batterylevelwarning.SettingsActivity"
+            android:label="@string/action_settings" >
+        </activity>
+        
+        <activity
+            android:name="com.normsstuff.batterylevelwarning.GetTimesActivity"
+            android:label="@string/action_settings" >
+        </activity>
+        
+    </application>
+
+</manifest>
